@@ -1,0 +1,39 @@
+.header {
+    min-height: 85px;
+    padding: 19px 0;
+    &-items {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 27px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &__flag {
+            position: absolute;
+            top: 0;
+            display: block;
+            margin-top: 1px;
+        }
+        &__info {
+            display: block;
+            margin-left: 39px;
+            color: #242424;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 18px;
+        }
+        &__country {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        &__contacts {
+            font-weight: 300;
+            a {
+                color: #242424;
+                text-decoration: none;
+            }
+        }
+    }
+}

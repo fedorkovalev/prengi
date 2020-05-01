@@ -1,0 +1,20 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/bootstrap-grid.min';
+
+@import 'base/variables';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/promo';
+@import 'blocks/buttons';
+@import 'blocks/advantage';
