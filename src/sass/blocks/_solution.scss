@@ -1,0 +1,60 @@
+.solution {
+    min-height: 889px;
+    padding: 79px 0 61px 0;
+    background: url(../img/bg/woman_bg.jpg) center (center/cover) no-repeat;
+    &__menu {
+        padding: 7px 33px 0 32px;
+        width: 843px;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 3px;
+        height: 65px; 
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            height: 49px;
+            li {
+                position: relative;
+                display: block;
+                padding: 0;
+                &:first-child {
+                    margin-left: 0;
+                }         
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -20px;
+                    top: -13px;
+                    display: block;
+                    height: 49px;
+                    width: 1px;
+				    background-color: #fff;
+                }
+                &:last-child {
+                    &::after {
+                        content: '';
+                        display: none;
+                    }
+                }
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+    .laptop {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
