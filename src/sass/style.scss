@@ -14,6 +14,9 @@
     position: relative;
     max-width: 1140px;
     margin: 0 auto;
+    &_half {
+        width: 570px;
+    }
 }
 
 @import 'blocks/header';
@@ -24,3 +27,4 @@
 @import 'blocks/carousel';
 @import 'blocks/solution';
 @import 'blocks/advantage';
+@import 'blocks/hosts';

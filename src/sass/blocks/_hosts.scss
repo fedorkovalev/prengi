@@ -1,0 +1,61 @@
+.hosts {
+    position: relative;
+    min-height: 580px;
+    &-item {
+        position: relative;
+        min-height: 580px;
+        width: 50%;
+        &_1 {
+            background: url(../img/bg/cloud.jpg) center center/cover no-repeat;
+            position: absolute;
+            left: 0;
+        }
+        &_2 {
+            background: url(../img/bg/server.jpg) center center/cover no-repeat;
+            position: absolute;
+            right: 0;
+        }
+        /* &__subtitle {
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 30px;
+            text-transform: uppercase;
+            width: 485px;
+            margin-top: 270px;
+            &_tar {
+                text-align: right;
+                margin-left: 135px;
+            }
+            &_tal {
+                position: absolute;
+                left: -79px;
+                text-align: left;
+            }
+        }
+        &__descr {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 26px;
+            &_tar {
+                text-align: right;
+                margin-left: 135px;
+            }
+            &_tal {
+                position: absolute;
+                left: -79px;
+                z-index: 100;
+                text-align: left;
+            }
+        }*/
+    }
+    .title {
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+    
+}
