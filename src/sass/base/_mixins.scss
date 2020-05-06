@@ -1,0 +1,26 @@
+@mixin blue__square_right {
+    &::after {
+        content: '';
+        display: block;
+        width: 167px;
+        height: 167px;
+        background-color: rgba($main-color, $alpha: .3);
+        position: absolute;
+        right: -39px;
+        top: -38px;
+        z-index: -1;
+    }
+}
+@mixin blue__square_left {
+    &::after {
+        content: '';
+        display: block;
+        width: 167px;
+        height: 167px;
+        background-color: rgba($main-color, $alpha: .3);
+        position: absolute;
+        left: -35px;
+        top: -38px;
+        z-index: -1;
+    }
+}

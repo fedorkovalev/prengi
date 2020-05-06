@@ -25,7 +25,6 @@ gulp.task('styles', function() {
             .pipe(autoprefixer())
             .pipe(cleanCSS({compatibility: 'ie8'}))
             .pipe(gulp.dest("dist/css"))
-            .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function() {
