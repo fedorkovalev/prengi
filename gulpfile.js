@@ -11,11 +11,11 @@ const htmlmin = require('gulp-htmlmin');
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            baseDir: "dist"
+            baseDir: "src"
         }
     });
 
-    gulp.watch('dist/*.html').on('change', browserSync.reload);
+    gulp.watch('src/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('styles', function() {
@@ -24,12 +24,14 @@ gulp.task('styles', function() {
             .pipe(rename({suffix: ".min",prefix: ""})) 
             .pipe(autoprefixer())
             .pipe(cleanCSS({compatibility: 'ie8'}))
-            .pipe(gulp.dest("dist/css"))
+            //.pipe(gulp.dest("dist/css"))
+            .pipe(gulp.dest("src/css"))
 });
 
 gulp.task('watch', function() {
     gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
-    gulp.watch('src/*.html').on('change', gulp.parallel('html'));
+    //gulp.watch('src/*.html').on('change', gulp.parallel('html'));
+    gulp.watch('src/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('html', function() {
@@ -64,4 +66,5 @@ gulp.task('images', function() {
         .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task('default', gulp.parallel('watch','server','styles', 'html', 'scripts', 'fonts', 'icons', 'mailer', 'images'));
+//gulp.task('default', gulp.parallel('watch','server','styles', 'html', 'scripts', 'fonts', 'icons', 'mailer', 'images'));
+gulp.task('default', gulp.parallel('watch','server','styles')); // only src

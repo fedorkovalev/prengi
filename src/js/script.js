@@ -16,4 +16,22 @@ $(document).ready(function(){
             }
         ]
     });
+    
+window.addEventListener('DOMContentLoaded', () => {
+    const rowHeader = document.querySelector('.row__header'),
+    headerItem = document.querySelectorAll('.header_items'),
+    hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        rowHeader.classList.toggle('row__header_active');
+    });
+
+    headerItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            rowHeader.classList.toggle('row__header_active');
+        })
+    })
+})
   });
