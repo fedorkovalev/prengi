@@ -304,6 +304,13 @@
         }
         
     }
+    .advantage {
+        &-items {
+            &__text {
+                font-size: 18px;
+            }
+        }
+    }
     .carousel {
         display: none;
     }
